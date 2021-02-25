@@ -3,8 +3,8 @@ defmodule Examen.Helpers.Biblioteca do
   import Ecto.Changeset
 
   schema "bibliotecas" do
-      fiel :nombre, :string
-      has_many :libros, Libro
+      field :nombre, :string
+      has_many :libros, Examen.Helpers.Libro
 
       timestamps()
   end
@@ -12,5 +12,7 @@ defmodule Examen.Helpers.Biblioteca do
   @doc false
   def changeset(biblioteca, attrs) do
     biblioteca
+    |> cast(attrs, [:nombre, :libros])
+    |> validate_required([:nombre, :libros])
   end
 end

@@ -3,8 +3,8 @@ defmodule Examen.Helpers.Autor do
   import Ecto.Changeset
 
   schema "autores" do
-    fiel :nombre, :string
-    has_many :libros,
+    field :nombre, :string
+    has_many :libros, Examen.Helpers.Libro
 
     timestamps()
   end
@@ -12,5 +12,7 @@ defmodule Examen.Helpers.Autor do
   @doc false
   def changeset(autor, attrs) do
     autor
+    |> cast(attrs, [:nombre, :libros])
+    |> validate_required([:nombre, :libros])
   end
 end

@@ -2,11 +2,10 @@ defmodule Examen.Repo.Migrations.CrearAutores do
   use Ecto.Migration
 
   def change do
-    create table(:autores)
+    create table(:autores) do
       add :nombre, :string
-      belongs_to :autor, Autor
-      belongs_to :biblioteca, Biblioteca
 
       timestamps()
+    end
   end
 end

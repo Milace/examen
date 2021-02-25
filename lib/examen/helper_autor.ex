@@ -1,4 +1,4 @@
-defmodule examen.HelperAutor do
+defmodule Examen.HelperAutor do
   @moduledoc """
   The HelperAccounts context.
   """
@@ -85,7 +85,7 @@ defmodule examen.HelperAutor do
 
   """
   def delete_autor(%Autor{} = autor) do
-    Repo.delete(Autor)
+    Repo.delete(autor)
   end
 
   @doc """
