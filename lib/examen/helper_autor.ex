@@ -5,25 +5,25 @@ defmodule Examen.HelperAutor do
 
   import Ecto.Query, warn: false
   alias Examen.Repo
-  alias Examen.Helpers.Autor
+  alias Examen.HelperAutor.Autor
 
   @doc """
-  Returns the list of Autors.
+  Returns the list of autor.
 
   ## Examples
 
-      iex> lista_autores()
+      iex> list_autor()
       [%Autor{}, ...]
 
   """
-  def lista_autores do
+  def list_autor do
     Repo.all(Autor)
   end
 
   @doc """
   Gets a single autor.
 
-  Raises `Ecto.NoResultsError` if the autor does not exist.
+  Raises `Ecto.NoResultsError` if the Autor does not exist.
 
   ## Examples
 

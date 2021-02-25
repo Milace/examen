@@ -5,25 +5,25 @@ defmodule Examen.HelperBiblioteca do
 
   import Ecto.Query, warn: false
   alias Examen.Repo
-  alias Examen.Helpers.Biblioteca
+  alias Examen.HelperBiblioteca.Biblioteca
 
   @doc """
-  Returns the list of Bibliotecas.
+  Returns the list of biblioteca.
 
   ## Examples
 
-      iex> lista_bibliotecas()
+      iex> list_biblioteca()
       [%Biblioteca{}, ...]
 
   """
-  def lista_bibliotecas do
+  def list_biblioteca do
     Repo.all(Biblioteca)
   end
 
   @doc """
   Gets a single biblioteca.
 
-  Raises `Ecto.NoResultsError` if the library does not exist.
+  Raises `Ecto.NoResultsError` if the Biblioteca does not exist.
 
   ## Examples
 

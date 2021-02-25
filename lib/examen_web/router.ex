@@ -17,6 +17,10 @@ defmodule ExamenWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/autores", AutorController
+    resources "/bibliotecas", BibliotecaController
+    resources "/libros", LibroController
+
   end
 
   # Other scopes may use custom stacks.

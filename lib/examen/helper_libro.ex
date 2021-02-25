@@ -5,25 +5,25 @@ defmodule Examen.HelperLibro do
 
   import Ecto.Query, warn: false
   alias Examen.Repo
-  alias Examen.Helpers.Libro
+  alias Examen.HelperLibro.Libro
 
   @doc """
-  Returns the list of Libros.
+  Returns the list of libro.
 
   ## Examples
 
-      iex> lista_libros()
+      iex> list_libro()
       [%Libro{}, ...]
 
   """
-  def lista_libros do
+  def list_libro do
     Repo.all(Libro)
   end
 
   @doc """
   Gets a single libro.
 
-  Raises `Ecto.NoResultsError` if the libro does not exist.
+  Raises `Ecto.NoResultsError` if the Libro does not exist.
 
   ## Examples
 
