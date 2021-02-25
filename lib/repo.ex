@@ -1,5 +1,5 @@
-# defmodule Examen.Repo do
-#   use Ecto.Repo,
-#     otp_app: :examen,
-#     adapter: Ecto.Adapters.Postgres
-# end
+defmodule Examen.Repo do
+  use Ecto.Repo,
+    otp_app: :examen,
+    adapter: Ecto.Adapters.Postgres
+end

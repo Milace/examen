@@ -2,8 +2,8 @@ defmodule Examen.Repo.Migrations.LibroBelongsToBibliotecaNew do
   use Ecto.Migration
 
   def change do
-    alter table(:libro) do
-      add :biblioteca_id, references(:biblioteca)
+    alter table(:biblioteca) do
+      add :libro_id, references(:libro)
     end
   end
 end
