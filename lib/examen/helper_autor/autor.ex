@@ -12,8 +12,7 @@ defmodule Examen.HelperAutor.Autor do
   @doc false
   def changeset(autor, attrs) do
     autor
-    |> cast(attrs, [:nombre, :libros_id])
-    |> assoc_constraint(:libros)
-    |> validate_required([:nombre, :libros_id])
+    |> cast(attrs, [:nombre])
+    |> validate_required([:nombre])
   end
 end

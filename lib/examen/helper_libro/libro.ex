@@ -13,9 +13,9 @@ defmodule Examen.HelperLibro.Libro do
   @doc false
   def changeset(libro, attrs) do
     libro
-    |> cast(attrs, [:nombre, :biblioteca_id, :autor_id])
+    |> cast(attrs, [:biblioteca_id, :autor_id, :nombre])
     |> assoc_constraint(:biblioteca)
     |> assoc_constraint(:autor)
-    |> validate_required([:nombre, :biblioteca_id, :autor_id])
+    |> validate_required([:nombre])
   end
 end
