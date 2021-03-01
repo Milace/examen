@@ -3,8 +3,8 @@ defmodule Examen.Repo.Migrations.LibroBelongsToBibliotecaAutor do
 
   def change do
     alter table(:libro) do
-      add :autor_id, references(:autor, on_delete: :nothing)
-      add :biblioteca_id, references(:biblioteca, on_delete: :nothing)
+      add :autor_id, references(:autor, on_delete: :delete_all)
+      add :biblioteca_id, references(:biblioteca, on_delete: :delete_all)
     end
   end
 end

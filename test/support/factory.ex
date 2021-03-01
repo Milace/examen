@@ -1,29 +1,28 @@
-defmodule Examen.Test.Support.Factory do
-  # with Ecto
-  use ExMachina.Ecto, repo: MyApp.Repo
+defmodule Examen.Factory do
+  use ExMachina.Ecto, repo: Examen.Repo
   alias Examen.HelperLibro.Libro
   alias Examen.HelperBiblioteca.Biblioteca
   alias Examen.HelperAutor.Autor
+
+  def autor_factory do
+    %Autor{
+      nombre: "Gabriel Garcia Marquez"
+      # libros: build(:libro),
+    }
+  end
+
+  def biblioteca_factory do
+    %Biblioteca{
+      nombre: "Biblioteca central"
+      # libros: build(:libro),
+    }
+  end
 
   def libro_factory do
     %Libro{
       nombre: "100 años de soledad",
       biblioteca: build(:biblioteca),
       autor: build(:autor)
-    }
-  end
-
-  def autor_factory do
-    %Autor{
-      nombre: "Gabriel Garcia Marquez",
-      libros: build(:libros),
-    }
-  end
-
-  def biblioteca_factory do
-    %Biblioteca{
-      nombre: "Biblioteca central",
-      libros: build(:libros),
     }
   end
 

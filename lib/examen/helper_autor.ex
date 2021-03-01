@@ -100,4 +100,13 @@ defmodule Examen.HelperAutor do
   def change_autor(%Autor{} = autor, attrs \\ %{}) do
     Autor.changeset(autor, attrs)
   end
+
+  def get_all_by_autor(id) do
+    query = from a in Autor,
+              join: l in assoc(a, :libros),
+              join: b in assoc(l, :biblioteca),
+              where: a.id == ^id,
+              select: a.nombre
+      Repo.one(query)
+  end
 end
